@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Lanterns — Spot the Difference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="hud">
+  <div id="hud-title">Twin Lanterns</div>
+  <div id="hud-scene">Scene 1 of 3 · Harbour Dawn</div>
+  <div id="hud-count"><span id="found-count">0</span> found · <span id="left-count">7</span> left</div>
+  <div id="hud-timer">02:30</div>
+  <div id="hud-buttons">
+    <button id="btn-hint" type="button">Hint (<span id="hint-count">3</span>)</button>
+    <button id="btn-lens" type="button">Lens: off</button>
+    <button id="btn-sound" type="button">Sound: on</button>
+    <button id="btn-restart" type="button">Restart</button>
+  </div>
+</header>
+
+<main id="stage">
+  <figure class="panel-wrap">
+    <canvas id="panel-left" width="560" height="420"></canvas>
+    <figcaption>Original</figcaption>
+  </figure>
+  <figure class="panel-wrap">
+    <canvas id="panel-right" width="560" height="420"></canvas>
+    <figcaption>Changed</figcaption>
+  </figure>
+  <canvas id="lens-canvas" width="180" height="180" hidden></canvas>
+</main>
+
+<p id="status-line">Find every difference between the two pictures. Click or tap one to mark it. Keyboard: arrows + Enter.</p>
+
+<div id="overlay" hidden>
+  <div id="overlay-card">
+    <h2 id="overlay-heading">Scene complete</h2>
+    <p id="overlay-text"></p>
+    <button id="overlay-button" type="button">Next scene</button>
+  </div>
+</div>
+
+<script src="audio.js"></script>
+<script src="differences.js"></script>
+<script src="scenes.js"></script>
+<script src="render.js"></script>
+<script src="input.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
